@@ -165,3 +165,44 @@ $$\mathbb{U}\mathbb{U}^\dagger = \mathbb{I}$$
 $$\mathbb{U}^\dagger\mathbb{U} = \mathbb{I}$$
 
 :::
+
+## 
+
+$$\psi \sim Bernoulli(p)$$
+
+$$\mathbb{U}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
+
+::: {.fragment .fade-in}
+
+$$\begin{bmatrix}\alpha_1&\alpha_2\\\alpha_3&\alpha_4\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
+
+:::
+
+## 
+
+$$\psi \sim Bernoulli(p)$$
+
+$$\mathbb{U}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
+
+$$\begin{bmatrix}\sqrt{1 - p}&\alpha_2\\\sqrt{p}&\alpha_4\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
+
+::: {.fragment .fade-in}
+
+$$\mathbb{U}\mathbb{U}^\dagger = \mathbb{I}$$
+
+$$\mathbb{U}^\dagger\mathbb{U} = \mathbb{I}$$
+
+:::
+
+## 
+
+$$\psi \sim Bernoulli(p)$$
+
+$$\mathbb{U}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
+
+$$\begin{bmatrix}\sqrt{1 - p}&-\sqrt{p}\\\sqrt{p}&\sqrt{1 - p}\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
+
+
+$$\mathbb{U}\mathbb{U}^\dagger = \mathbb{I}$$
+
+$$\mathbb{U}^\dagger\mathbb{U} = \mathbb{I}$$
