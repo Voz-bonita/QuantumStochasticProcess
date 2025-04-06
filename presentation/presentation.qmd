@@ -14,6 +14,9 @@ format:
     self-contained: true
 logo: images/UnB_Logo.png
 css: styles.css
+bibliography: references.bib
+nocite: |
+  @freeCodeCamp, @Bernoulli, @Milz_2021, @Sisson2022, @GBM
 ---
 
 ## {transition="fade"}
@@ -519,4 +522,10 @@ for t in time_steps[1:]:
 ![](../images/normal.png)
 </center>
 
+##
 
+### References
+
+::: {#refs}
+
+:::
