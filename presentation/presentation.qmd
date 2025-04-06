@@ -83,9 +83,21 @@ $$\ket{0} = \begin{bmatrix}1\\0\end{bmatrix}\qquad\ket{1} = \begin{bmatrix}0\\1\
 
 ::: {.fragment .fade-in}
 
-$$\ket{\psi} = \begin{bmatrix}\alpha\\\beta\end{bmatrix}$$
+$$\ket{\psi} = \begin{bmatrix}\alpha\\\beta\end{bmatrix} \class{invisible-text}{= \alpha\begin{bmatrix}1\\0\end{bmatrix} + \beta\begin{bmatrix}0\\1\end{bmatrix}}$$
 
 :::
+
+## {transition="fade"}
+
+$$\ket{0} = \begin{bmatrix}1\\0\end{bmatrix}\qquad\ket{1} = \begin{bmatrix}0\\1\end{bmatrix}$$
+
+$$\ket{\psi} = \begin{bmatrix}\alpha\\\beta\end{bmatrix} = \alpha\begin{bmatrix}1\\0\end{bmatrix} + \beta\begin{bmatrix}0\\1\end{bmatrix}$$
+
+## {transition="fade"}
+
+$$\ket{0} = \begin{bmatrix}1\\0\end{bmatrix}\qquad\ket{1} = \begin{bmatrix}0\\1\end{bmatrix}$$
+
+$$\ket{\psi} = \begin{bmatrix}\alpha\\\beta\end{bmatrix} = \alpha\ket{0} + \beta\ket{1}$$
 
 ::: {.fragment .fade-in}
 
