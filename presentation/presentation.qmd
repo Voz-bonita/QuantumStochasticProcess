@@ -129,3 +129,27 @@ $$\ket{\psi} = \begin{bmatrix}\alpha\\\beta\end{bmatrix}$$
 $$\bra{\psi} = \begin{bmatrix}\bar{\alpha}&\bar{\beta}\end{bmatrix} = \ket{\psi}^{\dagger}$$
 
 :::
+
+##
+
+$$\ket{\psi} = \begin{bmatrix}\alpha\\\beta\end{bmatrix}$$
+
+$$P(\psi = x) = \begin{cases}|\alpha|^2,& \text{ se } x = 0\\|\beta|^2,& \text{ se } x = 1\end{cases}$$
+
+::: {.fragment .fade-in}
+
+<center>
+Regra de Born
+</center>
+
+:::
+
+
+
+<center>
+
+</center>
+
+::: {.fragment .fade-in}
+
+:::
