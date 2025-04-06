@@ -206,3 +206,23 @@ $$\begin{bmatrix}\sqrt{1 - p}&-\sqrt{p}\\\sqrt{p}&\sqrt{1 - p}\end{bmatrix}\begi
 $$\mathbb{U}\mathbb{U}^\dagger = \mathbb{I}$$
 
 $$\mathbb{U}^\dagger\mathbb{U} = \mathbb{I}$$
+
+## 
+
+$$\psi \sim Bernoulli(p)$$
+
+$$\mathbb{U}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
+
+$$\begin{bmatrix}\sqrt{1 - p}&-\sqrt{p}\\\sqrt{p}&\sqrt{1 - p}\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
+
+$$R_Y(\theta) = \begin{bmatrix}\cos{\frac{\theta}{2}}&-\sin{\frac{\theta}{2}}\\\sin{\frac{\theta}{2}}&\cos{\frac{\theta}{2}}\end{bmatrix}$$
+
+## 
+
+$$\psi \sim Bernoulli(p)$$
+
+$$\mathbb{U}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
+
+$$R_Y(2\arcsin(\sqrt{p}))\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
+
+$$R_Y(\theta) = \begin{bmatrix}\cos{\frac{\theta}{2}}&-\sin{\frac{\theta}{2}}\\\sin{\frac{\theta}{2}}&\cos{\frac{\theta}{2}}\end{bmatrix}$$
