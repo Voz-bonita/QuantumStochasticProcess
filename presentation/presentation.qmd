@@ -1,0 +1,17 @@
+---
+title: "Movimento Browniano em um Computador Quântico"
+subtitle: "Intuição para estatísticos"
+author: "José Vítor Barreto Porfírio 190089971"
+date: "07 april 2025"
+date-format: "DD MMMM YYYY" 
+lang: pt
+execute:
+  echo: false
+format: 
+  revealjs:
+    theme: dark
+    footer: '[GitHub](https://github.com/Voz-bonita/QuantumStochasticProcess)'
+    self-contained: true
+logo: images/UnB_Logo.png
+css: styles.css
+---

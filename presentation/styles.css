@@ -1,0 +1,12 @@
+#title-slide .title {
+    font-size: 2em;
+}
+
+.reveal .slide-logo {
+    max-height: 1.5em !important;
+}
+
+
+.reveal .footer {
+    font-size: 0.5em !important;
+}
