@@ -380,4 +380,143 @@ for t in time_steps[1:]:
 ![](../images/bernoulli.png)
 </center>
 
+## {auto-animate="true"}
+
+```{.python}
+P = 0.5 # Bernoulli p
+B_0 = 0
+values = [B_0]
+
+time_steps = np.linspace(0, 1, num_steps + 1)
+
+for t in time_steps[1:]:
+    qc = QuantumCircuit(1)
+    qc.append(Bernoulli_gate(P), [0])
+    qc.measure_all()
+
+    result = simulator.run(qc, shots=1).result()
+    counts = result.get_counts(qc)
+    total = sum(counts.values())
+
+    down = counts.get('0')
+    up = counts.get('1')
+
+    delta_sign = bool(down)*-1 + bool(up)*1
+    S_t = values[-1] + np.sqrt(t) * sigma * delta_sign
+    values.append(S_t)
+```
+
+## {auto-animate="true"}
+
+```{.python}
+num_shots = 1024      # Number of measurements
+P = 0.5
+SD = np.sqrt(P * (1 - P)/num_shots)
+
+S_0 = 10.93
+prices = [S_0]
+
+time_steps = np.linspace(0, 1, num_steps + 1)
+
+for t in time_steps[1:]:
+    qc = QuantumCircuit(1)
+    qc.append(Bernoulli_gate(P), [0])
+    qc.measure_all()
+
+    result = simulator.run(qc, shots=1).result()
+    counts = result.get_counts(qc)
+    total = sum(counts.values())
+
+    down = counts.get('0')
+    up = counts.get('1')
+```
+
+## {auto-animate="true"}
+
+```{.python}
+num_shots = 1024      # Number of measurements
+P = 0.5
+SD = np.sqrt(P * (1 - P)/num_shots)
+
+S_0 = 10.93
+prices = [S_0]
+
+time_steps = np.linspace(0, 1, num_steps + 1)
+
+for t in time_steps[1:]:
+    qc = QuantumCircuit(1)
+    qc.append(Bernoulli_gate(P), [0])
+    qc.measure_all()
+
+    result = simulator.run(qc, shots=1).result()
+    counts = result.get_counts(qc)
+    total = sum(counts.values())
+
+    price_down = counts.get('0') / num_shots
+    price_up = counts.get('1') / num_shots
+```
+
+## {auto-animate="true"}
+
+```{.python}
+num_shots = 1024      # Number of measurements
+P = 0.5
+SD = np.sqrt(P * (1 - P)/num_shots)
+
+S_0 = 10.93
+prices = [S_0]
+
+time_steps = np.linspace(0, 1, num_steps + 1)
+
+for t in time_steps[1:]:
+    qc = QuantumCircuit(1)
+    qc.append(Bernoulli_gate(P), [0])
+    qc.measure_all()
+
+    result = simulator.run(qc, shots=1).result()
+    counts = result.get_counts(qc)
+    total = sum(counts.values())
+
+    price_down = counts.get('0') / num_shots
+    price_up = counts.get('1') / num_shots
+
+    random_norm = (price_up - P)/SD
+```
+
+## {auto-animate="true"}
+
+```{.python}
+num_shots = 1024      # Number of measurements
+P = 0.5
+SD = np.sqrt(P * (1 - P)/num_shots)
+
+S_0 = 10.93
+prices = [S_0]
+
+time_steps = np.linspace(0, 1, num_steps + 1)
+
+for t in time_steps[1:]:
+    qc = QuantumCircuit(1)
+    qc.append(Bernoulli_gate(P), [0])
+    qc.measure_all()
+
+    result = simulator.run(qc, shots=1).result()
+    counts = result.get_counts(qc)
+    total = sum(counts.values())
+
+    price_down = counts.get('0') / num_shots
+    price_up = counts.get('1') / num_shots
+
+    random_norm = (price_up - P)/SD
+    
+    S_t = S_0 * np.exp((mu - sigma**2/2) * t + np.sqrt(t) * sigma * random_norm)
+    prices.append(S_t)
+```
+
+##
+
+<center>
+![](../images/normal.png)
+</center>
+
 
