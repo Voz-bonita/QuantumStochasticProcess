@@ -144,12 +144,16 @@ Regra de Born
 
 :::
 
+##
 
+$$\class{invisible-text}{U}\begin{bmatrix}1\\0\end{bmatrix} \class{invisible-text}{=} \begin{bmatrix}\alpha\\\beta\end{bmatrix}$$
 
-<center>
+##
 
-</center>
+$$\mathbb{U}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\alpha\\\beta\end{bmatrix}$$
 
 ::: {.fragment .fade-in}
 
-:::
+$$\mathbb{U}\mathbb{U}^\dagger = \mathbb{I}$$
+
+$$\mathbb{U}^\dagger\mathbb{U} = \mathbb{I}$$
