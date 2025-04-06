@@ -226,3 +226,158 @@ $$\mathbb{U}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqr
 $$R_Y(2\arcsin(\sqrt{p}))\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\sqrt{1 - p}\\\sqrt{p}\end{bmatrix}$$
 
 $$R_Y(\theta) = \begin{bmatrix}\cos{\frac{\theta}{2}}&-\sin{\frac{\theta}{2}}\\\sin{\frac{\theta}{2}}&\cos{\frac{\theta}{2}}\end{bmatrix}$$
+
+## {auto-animate="true"}
+
+```{.python}
+from qiskit import QuantumCircuit
+from qiskit.circuit.library import RYGate
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Simulation parameters
+mu = 0.02             # Drift (expected return)
+sigma = 0.1           # Volatility (random fluctuations)
+num_steps = 50      # Time steps in the evolution
+```
+
+## {auto-animate="true"}
+
+```{.python}
+from qiskit import QuantumCircuit
+from qiskit.circuit.library import RYGate
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Simulation parameters
+mu = 0.02             # Drift (expected return)
+sigma = 0.1           # Volatility (random fluctuations)
+num_steps = 50      # Time steps in the evolution
+
+def Bernoulli_gate(p):
+    return RYGate(2*np.arcsin(np.sqrt(p))) 
+```
+
+## {auto-animate="true"}
+
+```{.python}
+from qiskit import QuantumCircuit
+from qiskit.circuit.library import RYGate
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Simulation parameters
+mu = 0.02             # Drift (expected return)
+sigma = 0.1           # Volatility (random fluctuations)
+num_steps = 50      # Time steps in the evolution
+
+def Bernoulli_gate(p):
+    return RYGate(2*np.arcsin(np.sqrt(p))) 
+
+P = 0.5 # Bernoulli p
+B_0 = 0
+values = [B_0]
+```
+
+## {auto-animate="true"}
+
+```{.python}
+P = 0.5 # Bernoulli p
+B_0 = 0
+values = [B_0]
+
+from qiskit_aer import AerSimulator
+
+simulator = AerSimulator()
+time_steps = np.linspace(0, 1, num_steps + 1)
+```
+
+## {auto-animate="true"}
+
+```{.python}
+P = 0.5 # Bernoulli p
+B_0 = 0
+values = [B_0]
+
+time_steps = np.linspace(0, 1, num_steps + 1)
+
+for t in time_steps[1:]:
+    qc = QuantumCircuit(1)
+    qc.append(Bernoulli_gate(P), [0])
+    qc.measure_all()
+```
+
+## {auto-animate="true"}
+
+```{.python}
+P = 0.5 # Bernoulli p
+B_0 = 0
+values = [B_0]
+
+time_steps = np.linspace(0, 1, num_steps + 1)
+
+for t in time_steps[1:]:
+    qc = QuantumCircuit(1)
+    qc.append(Bernoulli_gate(P), [0])
+    qc.measure_all()
+
+    result = simulator.run(qc, shots=1).result()
+    counts = result.get_counts(qc)
+    total = sum(counts.values())
+```
+
+## {auto-animate="true"}
+
+```{.python}
+P = 0.5 # Bernoulli p
+B_0 = 0
+values = [B_0]
+
+time_steps = np.linspace(0, 1, num_steps + 1)
+
+for t in time_steps[1:]:
+    qc = QuantumCircuit(1)
+    qc.append(Bernoulli_gate(P), [0])
+    qc.measure_all()
+
+    result = simulator.run(qc, shots=1).result()
+    counts = result.get_counts(qc)
+    total = sum(counts.values())
+
+    down = counts.get('0')
+    up = counts.get('1')
+```
+
+## {auto-animate="true"}
+
+```{.python}
+P = 0.5 # Bernoulli p
+B_0 = 0
+values = [B_0]
+
+time_steps = np.linspace(0, 1, num_steps + 1)
+
+for t in time_steps[1:]:
+    qc = QuantumCircuit(1)
+    qc.append(Bernoulli_gate(P), [0])
+    qc.measure_all()
+
+    result = simulator.run(qc, shots=1).result()
+    counts = result.get_counts(qc)
+    total = sum(counts.values())
+
+    down = counts.get('0')
+    up = counts.get('1')
+
+    delta_sign = bool(down)*-1 + bool(up)*1
+    S_t = values[-1] + np.sqrt(t) * sigma * delta_sign
+    values.append(S_t)
+```
+
+##
+
+<center>
+![](../images/bernoulli.png)
+</center>
+
+
