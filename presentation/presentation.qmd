@@ -19,6 +19,8 @@ css: styles.css
 ## {transition="fade"}
 
 \newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\braket}[2]{\langle#1|#2\rangle}
 
 <center>
 <h3>Computação Clássica</h3>
@@ -56,4 +58,38 @@ $$0 \qquad 1$$
 
 $$\alpha\ket{0} + \beta\ket{1}$$
 
+::: {.fragment .fade-in}
+
+Base computacional padrão
+
+:::
+
 </center>
+
+## {transition="fade"}
+
+<center>
+<h3>Notação de Dirac</h3>
+</center>
+
+$$\ket{x} \text{ se lê ket x}$$
+$$\bra{x} \text{ se lê bra x}$$
+$$\braket{x}{y} \text{ se lê bra x ket y}$$
+
+
+## {transition="fade"}
+
+$$\ket{0} = \begin{bmatrix}1\\0\end{bmatrix}\qquad\ket{1} = \begin{bmatrix}0\\1\end{bmatrix}$$
+
+::: {.fragment .fade-in}
+
+$$\ket{\psi} = \begin{bmatrix}\alpha\\\beta\end{bmatrix}$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\alpha, \beta \in \mathbb{C}$$
+$$|\alpha|^2 + |\beta|^2 = 1$$
+
+:::
