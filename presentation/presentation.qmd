@@ -15,3 +15,45 @@ format:
 logo: images/UnB_Logo.png
 css: styles.css
 ---
+
+## {transition="fade"}
+
+\newcommand{\ket}[1]{|#1\rangle}
+
+<center>
+<h3>Computação Clássica</h3>
+<h4>Bits de informação</h4>
+
+$$0 \qquad 1$$
+
+</center>
+
+::: {.fragment .fade-in}
+
+<center>
+<h3>Computação Quântica</h3>
+<h4>Qubits de informação</h4>
+
+$$\ket{0} \qquad \ket{1}$$
+
+</center>
+
+:::
+
+## {transition="fade"}
+
+<center>
+<h3>Computação Clássica</h3>
+<h4>Bits de informação</h4>
+
+$$0 \qquad 1$$
+
+</center>
+
+<center>
+<h3>Computação Quântica</h3>
+<h4>Qubits de informação</h4>
+
+$$\alpha\ket{0} + \beta\ket{1}$$
+
+</center>
