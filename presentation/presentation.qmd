@@ -136,6 +136,12 @@ $$\ket{\psi} = \begin{bmatrix}\alpha\\\beta\end{bmatrix}$$
 
 $$P(\psi = x) = \begin{cases}|\alpha|^2,& \text{ se } x = 0\\|\beta|^2,& \text{ se } x = 1\end{cases}$$
 
+##
+
+$$\ket{\psi} = \begin{bmatrix}\alpha\\\beta\end{bmatrix}$$
+
+$$P(\psi = x) = \begin{cases}|\alpha|^2,& \text{ se } x = 0\\1-|\alpha|^2,& \text{ se } x = 1\end{cases}$$
+
 ::: {.fragment .fade-in}
 
 <center>
@@ -157,3 +163,5 @@ $$\mathbb{U}\begin{bmatrix}1\\0\end{bmatrix} = \begin{bmatrix}\alpha\\\beta\end{
 $$\mathbb{U}\mathbb{U}^\dagger = \mathbb{I}$$
 
 $$\mathbb{U}^\dagger\mathbb{U} = \mathbb{I}$$
+
+:::
