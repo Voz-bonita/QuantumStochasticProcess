@@ -93,3 +93,27 @@ $$\alpha, \beta \in \mathbb{C}$$
 $$|\alpha|^2 + |\beta|^2 = 1$$
 
 :::
+
+## 
+
+$$z = a + ib$$
+
+::: {.fragment .fade-in}
+
+$$|z| = \sqrt{a^2 + b^2} \in \mathbb{R}$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\bar{z} = a - ib$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\ket{\psi} = \begin{bmatrix}\alpha\\\beta\end{bmatrix}$$
+
+$$\bra{\psi} = \begin{bmatrix}\bar{\alpha}&\bar{\beta}\end{bmatrix} = \ket{\psi}^{\dagger}$$
+
+:::
